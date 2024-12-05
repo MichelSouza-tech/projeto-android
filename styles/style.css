@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* fonte externa */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+ 
+/* Fonte interna */
+@font-face {
+    font-family: 'Android';
+    src: url('../fonts/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/* variáveis para cores e fontes */
+:root{ 
+    --cor0: #00E842;
+    --cor1: #2AA84E;
+    --cor2: #346943;
+    --cor3: #E80000;
+    --cor4: #933131;
+	/* --cor0: #c5ebd6;    
+    --cor1: #2fa866;     
+    --cor2: #063d1e; */    
+    
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif; 
+    --fonte-android: 'Android', cursive;     
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+body{
+    background-color: var(--cor1);  
+    font-family: var(--fonte-padrao); 
+}
+header{
+    min-height: 135px;
+    background-image: linear-gradient(0deg, var(--cor2), var(--cor1));
+    color: white;
+    font-family: var(--fonte-destaque);
+    padding: 30px 8px 12px 8px;   
+    text-align: center;
+}    
+header h1{
+    padding-bottom: 20px; 
+    font-size: 2.8em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.415);
+}
+header p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em; 
+    max-width: 520px; 
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.415);
+}
+nav{
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor2);
+    padding: 8px 6px; 
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+}
+nav > a {
+    color: var(--cor0);
+    padding: 4px;
+    text-decoration: none;
+}
+nav > a:hover{
+    background-color: var(--cor1);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition-duration: .7s;
+}
+a.externo::after{
+    content: '\00a0\2197';
+}
+main{
+    background-color: #fff;
+    min-width: 300px;
+    max-width: 860px;
+    margin: auto;
+    padding: 15px 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.363);
+}
+main h2{
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.5em;
+    font-weight: 200;
+}
+ main h3{
+    color: var(--cor2);
+    font-family: var(--fonte-android);
+    font-size: 1.2em;
+    font-weight: 200;
+    background-image: linear-gradient(to left, var(--cor3), transparent 90%);
+    padding: 2px 8px;
+}
+main p {
+    text-indent: 25px;
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+main img{
+    width: 100%;
+}
+main img.pequena{
+    max-width: 350px ;
+    display: block;
+    margin: auto;
+}
+main strong{
+    color: var(--cor0);
+}
+main a{
+    color: var(--cor2);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+    font-weight: bold;
+    text-decoration: none;  
+}
+
+main a:hover{
+    /* text-decoration: underline; */
+    color: var(--cor4);
+}
+article#movie{
+    background-color: var(--cor2);
+    margin: 0px -10px 0px -10px;
+    padding: 10px 0 56.87% 0;
+    position: relative; 
+}     
+article#movie > iframe{
+    display: block;
+    margin: auto;
+    position: absolute; 
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+} 
+article#movie video{
+    display: block;
+    margin: auto;
+}
+aside{
+    background-color: #2aa84ec5;
+    margin: 10px 0px; 
+    padding: 10px;
+    border-radius: 10px;      
+    box-shadow: 0px 0px 10px rgba(0, 0, 0.363);
+} 
+aside > h2{
+    color: #fff;
+    background-color: var(--cor4);
+    font-family: var(--fonte-padrao);    
+    font-size: 1.3em;
+    margin: -10px -10px 0px -10px;
+    padding: 4px 6px;
+    border-radius: 10px 10px 0px 0px;  
+}    
+aside > ul{
+    list-style-position: inside;
+    columns: 2;
+    color: var(--cor4);
+    font-weight: bold;
+    line-height: 1.3em;
+    list-style-type: '\2714\00A0';
+}    
+footer{
+    background-color: var(--cor2);
+    padding: 5px 0px;
+    margin-top: 10px;
+    color: var(--cor0);
+    text-align: center;    
+}
+.link {
+    color: var(--cor0);
+    font-weight: bold;
+    text-decoration: none;
+}
+.link:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
